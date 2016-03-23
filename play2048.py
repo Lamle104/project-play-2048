@@ -12,8 +12,8 @@ def play2048( times ):
     # 3. for each 'time', press these keys in this order: UP, RIGHT, DOWN, LEFT
     # 4. print the final score after all tries to the screen 
 
-    webbrowser = webdriver.Firefox() #opens up the game from firefox
-    webbrowser.open('https://gabrielecirulli.github.io/2048/') #this opens a game of 2048 from the URL
+    browser = webdriver.Firefox() #opens up the game from firefox
+    browser.open('https://gabrielecirulli.github.io/2048/') #this opens a game of 2048 from the URL
 
     htmltagElem = webbrowser.find_element_by_tag_name('html') #finds all the elements with matching tag name
     scoreElem = browser.find_element_by_class_name('score-container') #elements that use the CSS class name
