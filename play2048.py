@@ -15,16 +15,16 @@ def play2048( times ):
     browser = webdriver.Firefox() #opens up the game from firefox
     browser.open('https://gabrielecirulli.github.io/2048/') #this opens a game of 2048 from the URL
 
-    htmltagElem = webbrowser.find_element_by_tag_name('html') #finds all the elements with matching tag name
+    htmltagElem = browser.find_element_by_tag_name('html') #finds all the elements with matching tag name
     scoreElem = browser.find_element_by_class_name('score-container') #elements that use the CSS class name
 
     moves = 0 #moves equal zero
 
     while moves < times: #while moves is lesser than time
-        htmlElem.send_keys(Keys.UP) #Makes the keys go UP
-        htmlElem.send_keys(Keys.RIGHT) #Makes the keys go RIGHT
-        htmlElem.send_keys(Keys.DOWN) #Makes the keys go DOWN
-        htmlElem.send_keys(Keys.LEFT) #Makes the keys go LEFT
+        htmltagElem.send_keys(Keys.UP) #Makes the keys go UP
+        htmltagElem.send_keys(Keys.RIGHT) #Makes the keys go RIGHT
+        htmltagElem.send_keys(Keys.DOWN) #Makes the keys go DOWN
+        htmltagElem.send_keys(Keys.LEFT) #Makes the keys go LEFT
 
         moves += 1 #Moves plus equal one
  
