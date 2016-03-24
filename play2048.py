@@ -1,5 +1,4 @@
 #Lam Le
-
 #TODO: Import the module that will allow you to use Selenium
 from selenium import webdriver
 #TODO: Import the module that will allow you to use the up, down, left, and right keys on your keyboard
@@ -13,7 +12,7 @@ def play2048( times ):
     # 4. print the final score after all tries to the screen 
 
     browser = webdriver.Firefox() #opens up the game from firefox
-    browser.open('https://gabrielecirulli.github.io/2048/') #this opens a game of 2048 from the URL
+    browser.get('https://gabrielecirulli.github.io/2048/') #this opens a game of 2048 from the URL
 
     htmltagElem = browser.find_element_by_tag_name('html') #finds all the elements with matching tag name
     scoreElem = browser.find_element_by_class_name('score-container') #elements that use the CSS class name
